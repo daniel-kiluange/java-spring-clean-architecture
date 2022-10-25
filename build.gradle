@@ -1,0 +1,42 @@
+plugins {
+    id "org.springframework.boot" version "2.7.2"
+    id "io.spring.dependency-management" version "1.0.12.RELEASE"
+    id 'java'
+    id 'application'
+}
+
+
+allprojects{
+
+    plugins.apply("java")
+
+    group 'org.example'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+application {
+    mainClass = "java-spring-clean-architecture.application.App"
+}
+
+project(":adapter"){
+    plugins.apply("org.springframework.boot")
+    plugins.apply("io.spring.dependency-management")
+}
+
+project(":application"){
+    plugins.apply("org.springframework.boot")
+    plugins.apply("io.spring.dependency-management")
+}

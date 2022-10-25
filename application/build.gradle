@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(":domain")
+    implementation project(":port")
+    implementation project(":adapter")
+    implementation "org.springframework.boot:spring-boot-starter"
+}
