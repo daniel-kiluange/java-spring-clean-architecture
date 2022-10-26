@@ -28,7 +28,7 @@ allprojects{
 }
 
 application {
-    mainClass = "java-spring-clean-architecture.application.App"
+    mainClass = "com.example.App"
 }
 
 project(":adapter"){
